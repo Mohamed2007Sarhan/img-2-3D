@@ -1,0 +1,537 @@
+2026-05-15 01:52:51.345 | INFO     | __main__:main:225 - ╔══════════════════════════════════════════════════╗
+2026-05-15 01:52:51.361 | INFO     | __main__:main:226 - ║   PIFuHD → NVIDIA Audio2Face Pipeline            ║
+2026-05-15 01:52:51.361 | INFO     | __main__:main:227 - ╚══════════════════════════════════════════════════╝
+2026-05-15 01:52:51.361 | INFO     | __main__:main:228 -   Input OBJ : assets/123.obj
+2026-05-15 01:52:51.361 | INFO     | __main__:main:230 -   Texture   : assets/123.png
+2026-05-15 01:52:51.361 | INFO     | __main__:main:233 -   Output dir: C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\outputs
+2026-05-15 01:53:02.026 | INFO     | __main__:run_pipeline:113 - ━━━ Stage 1: Load OBJ ━━━
+2026-05-15 01:53:02.026 | INFO     | utils.mesh_io:load_obj:41 - Loading OBJ: assets\123.obj
+2026-05-15 01:53:02.311 | INFO     | utils.mesh_io:load_obj:59 - Loaded mesh: 46,109 vertices, 92,214 faces
+2026-05-15 01:53:02.358 | WARNING  | utils.mesh_io:_apply_texture:84 - Could not apply texture: 'ColorVisuals' object has no attribute 'uv'
+2026-05-15 01:53:02.454 | WARNING  | utils.mesh_io:_validate:109 -   ⚠ 183 duplicate vertices detected
+2026-05-15 01:53:02.469 | WARNING  | utils.mesh_io:_validate:109 -   ⚠ 366 degenerate (zero-area) faces
+2026-05-15 01:53:02.469 | INFO     | __main__:run_pipeline:125 - ━━━ Stage 2: Mesh Cleanup ━━━
+2026-05-15 01:53:02.469 | ERROR    | __main__:main:241 - Pipeline failed: No module named 'open3d'
+Traceback (most recent call last):
+
+  File "C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\main.py", line 246, in <module>
+    main()
+    └ <function main at 0x0000017E2BAD9B40>
+
+> File "C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\main.py", line 236, in main
+    run_pipeline(args)
+    │            └ Namespace(obj='assets/123.obj', texture='assets/123.png', wav=None, skip_cleanup=False, skip_retopo=False, skip_blendshapes=F...
+    └ <function run_pipeline at 0x0000017E2BA86EF0>
+
+  File "C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\main.py", line 126, in run_pipeline
+    from cleanup import clean_mesh
+
+  File "C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\cleanup.py", line 21, in <module>
+    import open3d as o3d
+
+ModuleNotFoundError: No module named 'open3d'
+2026-05-15 02:02:20.137 | INFO     | __main__:main:225 - ╔══════════════════════════════════════════════════╗
+2026-05-15 02:02:20.137 | INFO     | __main__:main:226 - ║   PIFuHD → NVIDIA Audio2Face Pipeline            ║
+2026-05-15 02:02:20.138 | INFO     | __main__:main:227 - ╚══════════════════════════════════════════════════╝
+2026-05-15 02:02:20.138 | INFO     | __main__:main:228 -   Input OBJ : assets/123.obj
+2026-05-15 02:02:20.138 | INFO     | __main__:main:230 -   Texture   : assets/123.png
+2026-05-15 02:02:20.138 | INFO     | __main__:main:233 -   Output dir: C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\outputs
+2026-05-15 02:02:21.214 | INFO     | __main__:run_pipeline:113 - ━━━ Stage 1: Load OBJ ━━━
+2026-05-15 02:02:21.216 | INFO     | utils.mesh_io:load_obj:41 - Loading OBJ: assets\123.obj
+2026-05-15 02:02:21.472 | INFO     | utils.mesh_io:load_obj:59 - Loaded mesh: 46,109 vertices, 92,214 faces
+2026-05-15 02:02:21.503 | WARNING  | utils.mesh_io:_apply_texture:84 - Could not apply texture: 'ColorVisuals' object has no attribute 'uv'
+2026-05-15 02:02:21.585 | WARNING  | utils.mesh_io:_validate:109 -   ⚠ 183 duplicate vertices detected
+2026-05-15 02:02:21.586 | WARNING  | utils.mesh_io:_validate:109 -   ⚠ 366 degenerate (zero-area) faces
+2026-05-15 02:02:21.586 | INFO     | __main__:run_pipeline:125 - ━━━ Stage 2: Mesh Cleanup ━━━
+2026-05-15 02:02:25.072 | INFO     | cleanup:clean_mesh:45 - === Mesh Cleanup ===
+2026-05-15 02:02:25.072 | INFO     | cleanup:clean_mesh:51 -   Input : 46,109 verts, 92,214 faces
+2026-05-15 02:02:25.096 | ERROR    | __main__:main:241 - Pipeline failed: 'NoneType' object has no attribute 'vertices'
+Traceback (most recent call last):
+
+  File "C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\main.py", line 246, in <module>
+    main()
+    └ <function main at 0x000001CB9AC4DB40>
+
+> File "C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\main.py", line 236, in main
+    run_pipeline(args)
+    │            └ Namespace(obj='assets/123.obj', texture='assets/123.png', wav=None, skip_cleanup=False, skip_retopo=False, skip_blendshapes=F...
+    └ <function run_pipeline at 0x000001CB9ABF6EF0>
+
+  File "C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\main.py", line 127, in run_pipeline
+    mesh = clean_mesh(mesh)
+           │          └ <trimesh.Trimesh(vertices.shape=(45926, 3), faces.shape=(92214, 3))>
+           └ <function clean_mesh at 0x000001CBCC823400>
+
+  File "C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\cleanup.py", line 54, in clean_mesh
+    mesh = _remove_duplicates(mesh)
+           │                  └ <trimesh.Trimesh(vertices.shape=(45926, 3), faces.shape=(92214, 3))>
+           └ <function _remove_duplicates at 0x000001CBCC823AC0>
+
+  File "C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\cleanup.py", line 80, in _remove_duplicates
+    after = len(mesh.vertices)
+                └ None
+
+AttributeError: 'NoneType' object has no attribute 'vertices'
+2026-05-15 02:11:37.537 | INFO     | __main__:main:225 - ╔══════════════════════════════════════════════════╗
+2026-05-15 02:11:37.537 | INFO     | __main__:main:226 - ║   PIFuHD → NVIDIA Audio2Face Pipeline            ║
+2026-05-15 02:11:37.537 | INFO     | __main__:main:227 - ╚══════════════════════════════════════════════════╝
+2026-05-15 02:11:37.537 | INFO     | __main__:main:228 -   Input OBJ : assets/123.obj
+2026-05-15 02:11:37.537 | INFO     | __main__:main:230 -   Texture   : assets/123.png
+2026-05-15 02:11:37.537 | INFO     | __main__:main:233 -   Output dir: C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\outputs
+2026-05-15 02:11:47.365 | INFO     | __main__:run_pipeline:113 - ━━━ Stage 1: Load OBJ ━━━
+2026-05-15 02:11:47.365 | INFO     | utils.mesh_io:load_obj:41 - Loading OBJ: assets\123.obj
+2026-05-15 02:11:47.636 | INFO     | utils.mesh_io:load_obj:59 - Loaded mesh: 46,109 vertices, 92,214 faces
+2026-05-15 02:11:47.665 | WARNING  | utils.mesh_io:_apply_texture:84 - Could not apply texture: 'ColorVisuals' object has no attribute 'uv'
+2026-05-15 02:11:47.746 | WARNING  | utils.mesh_io:_validate:109 -   ⚠ 183 duplicate vertices detected
+2026-05-15 02:11:47.748 | WARNING  | utils.mesh_io:_validate:109 -   ⚠ 366 degenerate (zero-area) faces
+2026-05-15 02:11:47.748 | INFO     | __main__:run_pipeline:125 - ━━━ Stage 2: Mesh Cleanup ━━━
+2026-05-15 02:11:48.943 | INFO     | cleanup:clean_mesh:45 - === Mesh Cleanup ===
+2026-05-15 02:11:48.943 | INFO     | cleanup:clean_mesh:51 -   Input : 46,109 verts, 92,214 faces
+2026-05-15 02:11:48.970 | ERROR    | __main__:main:241 - Pipeline failed: 'NoneType' object has no attribute 'vertices'
+Traceback (most recent call last):
+
+  File "C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\main.py", line 246, in <module>
+    main()
+    └ <function main at 0x0000015B0E6C1FC0>
+
+> File "C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\main.py", line 236, in main
+    run_pipeline(args)
+    │            └ Namespace(obj='assets/123.obj', texture='assets/123.png', wav=None, skip_cleanup=False, skip_retopo=False, skip_blendshapes=F...
+    └ <function run_pipeline at 0x0000015B0C3065F0>
+
+  File "C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\main.py", line 127, in run_pipeline
+    mesh = clean_mesh(mesh)
+           │          └ <trimesh.Trimesh(vertices.shape=(45926, 3), faces.shape=(92214, 3))>
+           └ <function clean_mesh at 0x0000015B3DD64280>
+
+  File "C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\cleanup.py", line 54, in clean_mesh
+    mesh = _remove_duplicates(mesh)
+           │                  └ <trimesh.Trimesh(vertices.shape=(45926, 3), faces.shape=(92214, 3))>
+           └ <function _remove_duplicates at 0x0000015B3DD64430>
+
+  File "C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\cleanup.py", line 80, in _remove_duplicates
+    after = len(mesh.vertices)
+                └ None
+
+AttributeError: 'NoneType' object has no attribute 'vertices'
+2026-05-15 02:13:23.831 | INFO     | __main__:main:225 - ╔══════════════════════════════════════════════════╗
+2026-05-15 02:13:23.831 | INFO     | __main__:main:226 - ║   PIFuHD → NVIDIA Audio2Face Pipeline            ║
+2026-05-15 02:13:23.831 | INFO     | __main__:main:227 - ╚══════════════════════════════════════════════════╝
+2026-05-15 02:13:23.831 | INFO     | __main__:main:228 -   Input OBJ : assets/123.obj
+2026-05-15 02:13:23.831 | INFO     | __main__:main:230 -   Texture   : assets/123.png
+2026-05-15 02:13:23.831 | INFO     | __main__:main:233 -   Output dir: C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\outputs
+2026-05-15 02:13:24.782 | INFO     | __main__:run_pipeline:113 - ━━━ Stage 1: Load OBJ ━━━
+2026-05-15 02:13:24.782 | INFO     | utils.mesh_io:load_obj:41 - Loading OBJ: assets\123.obj
+2026-05-15 02:13:25.088 | INFO     | utils.mesh_io:load_obj:59 - Loaded mesh: 46,109 vertices, 92,214 faces
+2026-05-15 02:13:25.123 | WARNING  | utils.mesh_io:_apply_texture:84 - Could not apply texture: 'ColorVisuals' object has no attribute 'uv'
+2026-05-15 02:13:25.213 | WARNING  | utils.mesh_io:_validate:109 -   ⚠ 183 duplicate vertices detected
+2026-05-15 02:13:25.214 | WARNING  | utils.mesh_io:_validate:109 -   ⚠ 366 degenerate (zero-area) faces
+2026-05-15 02:13:25.215 | INFO     | __main__:run_pipeline:125 - ━━━ Stage 2: Mesh Cleanup ━━━
+2026-05-15 02:13:26.525 | INFO     | cleanup:clean_mesh:45 - === Mesh Cleanup ===
+2026-05-15 02:13:26.525 | INFO     | cleanup:clean_mesh:51 -   Input : 46,109 verts, 92,214 faces
+2026-05-15 02:13:26.550 | ERROR    | __main__:main:241 - Pipeline failed: 'NoneType' object has no attribute 'vertices'
+Traceback (most recent call last):
+
+  File "C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\main.py", line 246, in <module>
+    main()
+    └ <function main at 0x000001F5B3781FC0>
+
+> File "C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\main.py", line 236, in main
+    run_pipeline(args)
+    │            └ Namespace(obj='assets/123.obj', texture='assets/123.png', wav=None, skip_cleanup=False, skip_retopo=False, skip_blendshapes=F...
+    └ <function run_pipeline at 0x000001F5B14A65F0>
+
+  File "C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\main.py", line 127, in run_pipeline
+    mesh = clean_mesh(mesh)
+           │          └ <trimesh.Trimesh(vertices.shape=(45926, 3), faces.shape=(92214, 3))>
+           └ <function clean_mesh at 0x000001F5E3764280>
+
+  File "C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\cleanup.py", line 54, in clean_mesh
+    mesh = _remove_duplicates(mesh)
+           │                  └ <trimesh.Trimesh(vertices.shape=(45926, 3), faces.shape=(92214, 3))>
+           └ <function _remove_duplicates at 0x000001F5E3764430>
+
+  File "C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\cleanup.py", line 80, in _remove_duplicates
+    after = len(mesh.vertices)
+                └ None
+
+AttributeError: 'NoneType' object has no attribute 'vertices'
+2026-05-15 02:14:36.455 | INFO     | __main__:main:225 - ╔══════════════════════════════════════════════════╗
+2026-05-15 02:14:36.455 | INFO     | __main__:main:226 - ║   PIFuHD → NVIDIA Audio2Face Pipeline            ║
+2026-05-15 02:14:36.458 | INFO     | __main__:main:227 - ╚══════════════════════════════════════════════════╝
+2026-05-15 02:14:36.458 | INFO     | __main__:main:228 -   Input OBJ : assets/123.obj
+2026-05-15 02:14:36.458 | INFO     | __main__:main:230 -   Texture   : assets/123.png
+2026-05-15 02:14:36.458 | INFO     | __main__:main:233 -   Output dir: C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\outputs
+2026-05-15 02:14:37.130 | INFO     | __main__:run_pipeline:113 - ━━━ Stage 1: Load OBJ ━━━
+2026-05-15 02:14:37.130 | INFO     | utils.mesh_io:load_obj:41 - Loading OBJ: assets\123.obj
+2026-05-15 02:14:37.389 | INFO     | utils.mesh_io:load_obj:59 - Loaded mesh: 46,109 vertices, 92,214 faces
+2026-05-15 02:14:37.417 | WARNING  | utils.mesh_io:_apply_texture:84 - Could not apply texture: 'ColorVisuals' object has no attribute 'uv'
+2026-05-15 02:14:37.496 | WARNING  | utils.mesh_io:_validate:109 -   ⚠ 183 duplicate vertices detected
+2026-05-15 02:14:37.496 | WARNING  | utils.mesh_io:_validate:109 -   ⚠ 366 degenerate (zero-area) faces
+2026-05-15 02:14:37.496 | INFO     | __main__:run_pipeline:125 - ━━━ Stage 2: Mesh Cleanup ━━━
+2026-05-15 02:14:38.585 | INFO     | cleanup:clean_mesh:45 - === Mesh Cleanup ===
+2026-05-15 02:14:38.585 | INFO     | cleanup:clean_mesh:51 -   Input : 46,109 verts, 92,214 faces
+2026-05-15 02:14:38.625 | DEBUG    | cleanup:_remove_duplicates:83 -   Duplicate removal: 46,109 → 45,926 vertices (removed 183)
+2026-05-15 02:14:38.664 | DEBUG    | cleanup:_fix_normals:91 -   Normals fixed
+2026-05-15 02:14:38.664 | DEBUG    | cleanup:_remove_degenerate:102 -   Removed 366 degenerate faces
+2026-05-15 02:14:38.680 | DEBUG    | cleanup:_fill_holes:127 -   Open3D hole fill unavailable (fill_holes not available), using trimesh fallback
+2026-05-15 02:14:38.727 | DEBUG    | cleanup:_fill_holes:129 -   Holes filled via trimesh
+2026-05-15 02:14:38.727 | DEBUG    | cleanup:_decimate:144 -   Decimating 91,848 → ~15,000 faces …
+2026-05-15 02:14:39.462 | DEBUG    | cleanup:_decimate:154 -   Decimation done → 15,000 faces
+2026-05-15 02:14:39.462 | INFO     | cleanup:clean_mesh:66 -   Output: 7,502 verts, 15,000 faces
+2026-05-15 02:14:39.462 | INFO     | cleanup:clean_mesh:67 - === Cleanup complete ===
+2026-05-15 02:14:39.491 | INFO     | utils.mesh_io:save_obj:119 - Saved OBJ → C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\outputs\01_cleaned.obj
+2026-05-15 02:14:39.491 | INFO     | __main__:run_pipeline:129 -   → C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\outputs\01_cleaned.obj
+2026-05-15 02:14:39.491 | INFO     | __main__:run_pipeline:139 - ━━━ Stage 3: Face Detection ━━━
+2026-05-15 02:14:39.491 | INFO     | retopo:detect_face_region:49 - === Face Detection ===
+2026-05-15 02:14:39.491 | DEBUG    | retopo:_head_mask:96 -   Y threshold for head: 0.403  (1,612 / 7,502 vertices)
+2026-05-15 02:14:39.520 | INFO     | retopo:detect_face_region:52 -   Face region: 1,610 vertices, 3,125 faces
+2026-05-15 02:14:39.520 | DEBUG    | retopo:_landmarks_mediapipe:177 -   mediapipe not installed
+2026-05-15 02:14:39.520 | WARNING  | retopo:_detect_landmarks:111 -   MediaPipe failed — falling back to heuristic
+2026-05-15 02:14:39.523 | INFO     | retopo:_landmarks_heuristic:267 -   Heuristic: 18 landmarks estimated
+2026-05-15 02:14:39.523 | INFO     | retopo:detect_face_region:55 -   Landmarks detected: 18
+2026-05-15 02:14:39.523 | INFO     | utils.mesh_io:save_obj:119 - Saved OBJ → C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\outputs\02_face.obj
+2026-05-15 02:14:39.523 | INFO     | __main__:run_pipeline:144 - ━━━ Stage 4: Retopology ━━━
+2026-05-15 02:14:39.523 | INFO     | retopo:retopologize:67 - === Retopology ===
+2026-05-15 02:14:40.743 | DEBUG    | retopo:_uniform_remesh:296 -   Remeshed → 4,139 verts
+2026-05-15 02:14:40.839 | INFO     | retopo:retopologize:75 -   Retopo result: 4,139 verts, 8,191 faces
+2026-05-15 02:14:40.855 | INFO     | utils.mesh_io:save_obj:119 - Saved OBJ → C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\outputs\03_face_retopo.obj
+2026-05-15 02:14:40.855 | INFO     | __main__:run_pipeline:147 -   → C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\outputs\03_face_retopo.obj
+2026-05-15 02:14:40.855 | INFO     | __main__:run_pipeline:155 - ━━━ Stage 5: Blendshape Generation ━━━
+2026-05-15 02:14:40.871 | INFO     | blendshapes:generate_blendshapes:53 - === Blendshape Generation ===
+2026-05-15 02:14:40.886 | DEBUG    | blendshapes:generate_blendshapes:62 -   JawOpen: max displacement = 0.0378
+2026-05-15 02:14:40.886 | DEBUG    | blendshapes:generate_blendshapes:62 -   MouthSmileLeft: max displacement = 0.0287
+2026-05-15 02:14:40.886 | DEBUG    | blendshapes:generate_blendshapes:62 -   MouthSmileRight: max displacement = 0.0280
+2026-05-15 02:14:40.886 | DEBUG    | blendshapes:generate_blendshapes:62 -   EyeBlinkLeft: max displacement = 0.0075
+2026-05-15 02:14:40.886 | DEBUG    | blendshapes:generate_blendshapes:62 -   EyeBlinkRight: max displacement = 0.0018
+2026-05-15 02:14:40.886 | DEBUG    | blendshapes:generate_blendshapes:62 -   MouthPucker: max displacement = 0.0136
+2026-05-15 02:14:40.886 | DEBUG    | blendshapes:generate_blendshapes:62 -   MouthFunnel: max displacement = 0.0055
+2026-05-15 02:14:40.886 | DEBUG    | blendshapes:generate_blendshapes:62 -   BrowInnerUp: max displacement = 0.0055
+2026-05-15 02:14:40.886 | DEBUG    | blendshapes:generate_blendshapes:62 -   BrowDown_L: max displacement = 0.0070
+2026-05-15 02:14:40.886 | DEBUG    | blendshapes:generate_blendshapes:62 -   BrowDown_R: max displacement = 0.0061
+2026-05-15 02:14:40.886 | DEBUG    | blendshapes:generate_blendshapes:62 -   CheekPuff: max displacement = 0.0162
+2026-05-15 02:14:40.886 | DEBUG    | blendshapes:generate_blendshapes:62 -   Viseme_AA: max displacement = 0.0201
+2026-05-15 02:14:40.886 | DEBUG    | blendshapes:generate_blendshapes:62 -   Viseme_OH: max displacement = 0.0128
+2026-05-15 02:14:40.886 | DEBUG    | blendshapes:generate_blendshapes:62 -   Viseme_EE: max displacement = 0.0220
+2026-05-15 02:14:40.902 | DEBUG    | blendshapes:generate_blendshapes:62 -   Viseme_FV: max displacement = 0.0029
+2026-05-15 02:14:40.902 | DEBUG    | blendshapes:generate_blendshapes:62 -   Viseme_MP: max displacement = 0.0000
+2026-05-15 02:14:40.902 | INFO     | blendshapes:generate_blendshapes:68 - === Generated 16 blendshapes ===
+2026-05-15 02:14:40.928 | INFO     | blendshapes:save_blendshapes:78 - Blendshapes saved to C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\outputs\blendshapes
+2026-05-15 02:14:40.928 | INFO     | __main__:run_pipeline:163 -   → C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\outputs\blendshapes
+2026-05-15 02:14:40.929 | INFO     | __main__:run_pipeline:171 - ━━━ Stage 6: Export (FBX / USD) ━━━
+2026-05-15 02:14:40.933 | INFO     | export:export_for_audio2face:78 - Blender export script written → C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\outputs\_blender_export_script.py
+2026-05-15 02:14:40.933 | INFO     | export:_run_blender:284 - Running Blender: blender --background --python C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\outputs\_blender_export_script.py
+2026-05-15 02:14:40.933 | WARNING  | export:_run_blender:303 - Blender executable not found at 'blender'. Attempting direct bpy import (requires 'pip install bpy') ...
+2026-05-15 02:14:40.933 | ERROR    | __main__:main:241 - Pipeline failed: Neither Blender binary nor standalone 'bpy' package found.
+Install via: pip install bpy
+Or set blender_exec= to your Blender binary path.
+Traceback (most recent call last):
+
+  File "C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\export.py", line 287, in _run_blender
+    proc = subprocess.run(
+           │          └ <function run at 0x000001E5C42508B0>
+           └ <module 'subprocess' from 'C:\\Users\\MohamedSarhan\\AppData\\Local\\Programs\\Python\\Python310\\lib\\subprocess.py'>
+
+  File "C:\Users\MohamedSarhan\AppData\Local\Programs\Python\Python310\lib\subprocess.py", line 503, in run
+    with Popen(*popenargs, **kwargs) as process:
+         │      │            └ {'text': True, 'stdout': -1, 'stderr': -1}
+         │      └ (['blender', '--background', '--python', 'C:\\Users\\MohamedSarhan\\Desktop\\Frontend\\obj-to-vedio\\pifuhd_audio2face_pipeli...
+         └ <class 'subprocess.Popen'>
+
+  File "C:\Users\MohamedSarhan\AppData\Local\Programs\Python\Python310\lib\subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    │    │              │     │           │           └ True
+    │    │              │     │           └ None
+    │    │              │     └ None
+    │    │              └ ['blender', '--background', '--python', 'C:\\Users\\MohamedSarhan\\Desktop\\Frontend\\obj-to-vedio\\pifuhd_audio2face_pipelin...
+    │    └ <function Popen._execute_child at 0x000001E5C4251870>
+    └ <Popen: returncode: None args: ['blender', '--background', '--python', 'C:\\...>
+
+  File "C:\Users\MohamedSarhan\AppData\Local\Programs\Python\Python310\lib\subprocess.py", line 1440, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       │       │             │           └ 'blender --background --python C:\\Users\\MohamedSarhan\\Desktop\\Frontend\\obj-to-vedio\\pifuhd_audio2face_pipeline\\outputs...
+                       │       │             └ None
+                       │       └ <built-in function CreateProcess>
+                       └ <module '_winapi' (built-in)>
+
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\export.py", line 323, in _run_script_direct
+    import bpy  # noqa
+
+ModuleNotFoundError: No module named 'bpy'
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\main.py", line 246, in <module>
+    main()
+    └ <function main at 0x000001E5C61B1FC0>
+
+> File "C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\main.py", line 236, in main
+    run_pipeline(args)
+    │            └ Namespace(obj='assets/123.obj', texture='assets/123.png', wav=None, skip_cleanup=False, skip_retopo=False, skip_blendshapes=F...
+    └ <function run_pipeline at 0x000001E5C3E165F0>
+
+  File "C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\main.py", line 173, in run_pipeline
+    results = export_for_audio2face(
+              └ <function export_for_audio2face at 0x000001E5FB436290>
+
+  File "C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\export.py", line 80, in export_for_audio2face
+    result_paths = _run_blender(blender_exec, script_path, output_dir)
+                   │            │             │            └ WindowsPath('C:/Users/MohamedSarhan/Desktop/Frontend/obj-to-vedio/pifuhd_audio2face_pipeline/outputs')
+                   │            │             └ WindowsPath('C:/Users/MohamedSarhan/Desktop/Frontend/obj-to-vedio/pifuhd_audio2face_pipeline/outputs/_blender_export_script.py')
+                   │            └ 'blender'
+                   └ <function _run_blender at 0x000001E5FB4363B0>
+
+  File "C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\export.py", line 307, in _run_blender
+    _run_script_direct(script_path)
+    │                  └ WindowsPath('C:/Users/MohamedSarhan/Desktop/Frontend/obj-to-vedio/pifuhd_audio2face_pipeline/outputs/_blender_export_script.py')
+    └ <function _run_script_direct at 0x000001E5FB436440>
+
+  File "C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\export.py", line 326, in _run_script_direct
+    raise RuntimeError(
+
+RuntimeError: Neither Blender binary nor standalone 'bpy' package found.
+Install via: pip install bpy
+Or set blender_exec= to your Blender binary path.
+2026-05-15 02:24:25.069 | INFO     | __main__:main:225 - ╔══════════════════════════════════════════════════╗
+2026-05-15 02:24:25.069 | INFO     | __main__:main:226 - ║   PIFuHD → NVIDIA Audio2Face Pipeline            ║
+2026-05-15 02:24:25.069 | INFO     | __main__:main:227 - ╚══════════════════════════════════════════════════╝
+2026-05-15 02:24:25.069 | INFO     | __main__:main:228 -   Input OBJ : assets/123.obj
+2026-05-15 02:24:25.069 | INFO     | __main__:main:230 -   Texture   : assets/123.png
+2026-05-15 02:24:25.069 | INFO     | __main__:main:233 -   Output dir: C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\outputs
+2026-05-15 02:24:26.324 | INFO     | __main__:run_pipeline:113 - ━━━ Stage 1: Load OBJ ━━━
+2026-05-15 02:24:26.324 | INFO     | utils.mesh_io:load_obj:41 - Loading OBJ: assets\123.obj
+2026-05-15 02:24:26.577 | INFO     | utils.mesh_io:load_obj:59 - Loaded mesh: 46,109 vertices, 92,214 faces
+2026-05-15 02:24:26.614 | WARNING  | utils.mesh_io:_apply_texture:84 - Could not apply texture: 'ColorVisuals' object has no attribute 'uv'
+2026-05-15 02:24:26.688 | WARNING  | utils.mesh_io:_validate:109 -   ⚠ 183 duplicate vertices detected
+2026-05-15 02:24:26.688 | WARNING  | utils.mesh_io:_validate:109 -   ⚠ 366 degenerate (zero-area) faces
+2026-05-15 02:24:26.688 | INFO     | __main__:run_pipeline:125 - ━━━ Stage 2: Mesh Cleanup ━━━
+2026-05-15 02:24:28.145 | INFO     | cleanup:clean_mesh:45 - === Mesh Cleanup ===
+2026-05-15 02:24:28.145 | INFO     | cleanup:clean_mesh:51 -   Input : 46,109 verts, 92,214 faces
+2026-05-15 02:24:28.175 | DEBUG    | cleanup:_remove_duplicates:83 -   Duplicate removal: 46,109 → 45,926 vertices (removed 183)
+2026-05-15 02:24:28.223 | DEBUG    | cleanup:_fix_normals:91 -   Normals fixed
+2026-05-15 02:24:28.237 | DEBUG    | cleanup:_remove_degenerate:102 -   Removed 366 degenerate faces
+2026-05-15 02:24:28.240 | DEBUG    | cleanup:_fill_holes:127 -   Open3D hole fill unavailable (fill_holes not available), using trimesh fallback
+2026-05-15 02:24:28.280 | DEBUG    | cleanup:_fill_holes:129 -   Holes filled via trimesh
+2026-05-15 02:24:28.288 | DEBUG    | cleanup:_decimate:144 -   Decimating 91,848 → ~15,000 faces …
+2026-05-15 02:24:29.399 | DEBUG    | cleanup:_decimate:154 -   Decimation done → 15,000 faces
+2026-05-15 02:24:29.400 | INFO     | cleanup:clean_mesh:66 -   Output: 7,502 verts, 15,000 faces
+2026-05-15 02:24:29.401 | INFO     | cleanup:clean_mesh:67 - === Cleanup complete ===
+2026-05-15 02:24:29.462 | INFO     | utils.mesh_io:save_obj:119 - Saved OBJ → C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\outputs\01_cleaned.obj
+2026-05-15 02:24:29.462 | INFO     | __main__:run_pipeline:129 -   → C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\outputs\01_cleaned.obj
+2026-05-15 02:24:29.466 | INFO     | __main__:run_pipeline:139 - ━━━ Stage 3: Face Detection ━━━
+2026-05-15 02:24:29.468 | INFO     | retopo:detect_face_region:49 - === Face Detection ===
+2026-05-15 02:24:29.470 | DEBUG    | retopo:_head_mask:96 -   Y threshold for head: 0.403  (1,612 / 7,502 vertices)
+2026-05-15 02:24:29.510 | INFO     | retopo:detect_face_region:52 -   Face region: 1,610 vertices, 3,125 faces
+2026-05-15 02:24:29.510 | DEBUG    | retopo:_landmarks_mediapipe:177 -   mediapipe not installed
+2026-05-15 02:24:29.510 | WARNING  | retopo:_detect_landmarks:111 -   MediaPipe failed — falling back to heuristic
+2026-05-15 02:24:29.528 | INFO     | retopo:_landmarks_heuristic:267 -   Heuristic: 18 landmarks estimated
+2026-05-15 02:24:29.528 | INFO     | retopo:detect_face_region:55 -   Landmarks detected: 18
+2026-05-15 02:24:29.541 | INFO     | utils.mesh_io:save_obj:119 - Saved OBJ → C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\outputs\02_face.obj
+2026-05-15 02:24:29.541 | INFO     | __main__:run_pipeline:144 - ━━━ Stage 4: Retopology ━━━
+2026-05-15 02:24:29.543 | INFO     | retopo:retopologize:67 - === Retopology ===
+2026-05-15 02:24:31.738 | DEBUG    | retopo:_uniform_remesh:296 -   Remeshed → 4,141 verts
+2026-05-15 02:24:32.154 | INFO     | retopo:retopologize:75 -   Retopo result: 4,141 verts, 8,192 faces
+2026-05-15 02:24:32.202 | INFO     | utils.mesh_io:save_obj:119 - Saved OBJ → C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\outputs\03_face_retopo.obj
+2026-05-15 02:24:32.202 | INFO     | __main__:run_pipeline:147 -   → C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\outputs\03_face_retopo.obj
+2026-05-15 02:24:32.203 | INFO     | __main__:run_pipeline:155 - ━━━ Stage 5: Blendshape Generation ━━━
+2026-05-15 02:24:32.207 | INFO     | blendshapes:generate_blendshapes:53 - === Blendshape Generation ===
+2026-05-15 02:24:32.251 | DEBUG    | blendshapes:generate_blendshapes:62 -   JawOpen: max displacement = 0.0388
+2026-05-15 02:24:32.253 | DEBUG    | blendshapes:generate_blendshapes:62 -   MouthSmileLeft: max displacement = 0.0289
+2026-05-15 02:24:32.263 | DEBUG    | blendshapes:generate_blendshapes:62 -   MouthSmileRight: max displacement = 0.0280
+2026-05-15 02:24:32.265 | DEBUG    | blendshapes:generate_blendshapes:62 -   EyeBlinkLeft: max displacement = 0.0075
+2026-05-15 02:24:32.266 | DEBUG    | blendshapes:generate_blendshapes:62 -   EyeBlinkRight: max displacement = 0.0063
+2026-05-15 02:24:32.274 | DEBUG    | blendshapes:generate_blendshapes:62 -   MouthPucker: max displacement = 0.0143
+2026-05-15 02:24:32.285 | DEBUG    | blendshapes:generate_blendshapes:62 -   MouthFunnel: max displacement = 0.0066
+2026-05-15 02:24:32.286 | DEBUG    | blendshapes:generate_blendshapes:62 -   BrowInnerUp: max displacement = 0.0056
+2026-05-15 02:24:32.286 | DEBUG    | blendshapes:generate_blendshapes:62 -   BrowDown_L: max displacement = 0.0085
+2026-05-15 02:24:32.286 | DEBUG    | blendshapes:generate_blendshapes:62 -   BrowDown_R: max displacement = 0.0044
+2026-05-15 02:24:32.303 | DEBUG    | blendshapes:generate_blendshapes:62 -   CheekPuff: max displacement = 0.0166
+2026-05-15 02:24:32.317 | DEBUG    | blendshapes:generate_blendshapes:62 -   Viseme_AA: max displacement = 0.0210
+2026-05-15 02:24:32.325 | DEBUG    | blendshapes:generate_blendshapes:62 -   Viseme_OH: max displacement = 0.0138
+2026-05-15 02:24:32.330 | DEBUG    | blendshapes:generate_blendshapes:62 -   Viseme_EE: max displacement = 0.0224
+2026-05-15 02:24:32.332 | DEBUG    | blendshapes:generate_blendshapes:62 -   Viseme_FV: max displacement = 0.0046
+2026-05-15 02:24:32.333 | DEBUG    | blendshapes:generate_blendshapes:62 -   Viseme_MP: max displacement = 0.0006
+2026-05-15 02:24:32.333 | INFO     | blendshapes:generate_blendshapes:68 - === Generated 16 blendshapes ===
+2026-05-15 02:24:32.361 | INFO     | blendshapes:save_blendshapes:78 - Blendshapes saved to C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\outputs\blendshapes
+2026-05-15 02:24:32.361 | INFO     | __main__:run_pipeline:163 -   → C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\outputs\blendshapes
+2026-05-15 02:24:32.361 | INFO     | __main__:run_pipeline:171 - ━━━ Stage 6: Export (FBX / USD) ━━━
+2026-05-15 02:24:32.376 | INFO     | export:export_for_audio2face:173 - Blender export script written → C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\outputs\_blender_export_script.py
+2026-05-15 02:24:32.387 | WARNING  | export:_run_blender:376 - لم يُعثر على blender في PATH أو المسارات الاعتيادية؛ محاولة استيراد bpy من بيئة بايثون الحالية (نادر على Windows)…
+2026-05-15 02:24:32.398 | ERROR    | __main__:main:241 - Pipeline failed: لم يُعثر على Blender.
+
+على Windows: ثبّت Blender من https://www.blender.org/download/ ثم إما:
+  • أضف مجلد التثبيت (المجلد الذي فيه blender.exe) إلى PATH، أو
+  • مرّر المسار الكامل:  --blender "C:\Program Files\Blender Foundation\Blender 4.2\blender.exe"
+  • أو عيّن متغير بيئة:  set BLENDER_EXE=المسار\blender.exe
+
+ملاحظة: حزمة pip اسمها `bpy` لا تدعم معظم إصدارات Windows؛ استخدم البرنامج الرسمي.
+Traceback (most recent call last):
+
+  File "C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\export.py", line 427, in _run_script_direct
+    import bpy  # noqa
+
+ModuleNotFoundError: No module named 'bpy'
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\main.py", line 246, in <module>
+    main()
+    └ <function main at 0x0000019D29411FC0>
+
+> File "C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\main.py", line 236, in main
+    run_pipeline(args)
+    │            └ Namespace(obj='assets/123.obj', texture='assets/123.png', wav=None, skip_cleanup=False, skip_retopo=False, skip_blendshapes=F...
+    └ <function run_pipeline at 0x0000019D270965F0>
+
+  File "C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\main.py", line 173, in run_pipeline
+    results = export_for_audio2face(
+              └ <function export_for_audio2face at 0x0000019D5E7E69E0>
+
+  File "C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\export.py", line 175, in export_for_audio2face
+    result_paths = _run_blender(blender_exec, script_path, output_dir)
+                   │            │             │            └ WindowsPath('C:/Users/MohamedSarhan/Desktop/Frontend/obj-to-vedio/pifuhd_audio2face_pipeline/outputs')
+                   │            │             └ WindowsPath('C:/Users/MohamedSarhan/Desktop/Frontend/obj-to-vedio/pifuhd_audio2face_pipeline/outputs/_blender_export_script.py')
+                   │            └ 'blender'
+                   └ <function _run_blender at 0x0000019D5E7E6B00>
+
+  File "C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\export.py", line 380, in _run_blender
+    _run_script_direct(script_path)
+    │                  └ WindowsPath('C:/Users/MohamedSarhan/Desktop/Frontend/obj-to-vedio/pifuhd_audio2face_pipeline/outputs/_blender_export_script.py')
+    └ <function _run_script_direct at 0x0000019D5E7E6B90>
+
+  File "C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\export.py", line 430, in _run_script_direct
+    raise RuntimeError(_blender_missing_instructions())
+                       └ <function _blender_missing_instructions at 0x0000019D5E7E6950>
+
+RuntimeError: لم يُعثر على Blender.
+
+على Windows: ثبّت Blender من https://www.blender.org/download/ ثم إما:
+  • أضف مجلد التثبيت (المجلد الذي فيه blender.exe) إلى PATH، أو
+  • مرّر المسار الكامل:  --blender "C:\Program Files\Blender Foundation\Blender 4.2\blender.exe"
+  • أو عيّن متغير بيئة:  set BLENDER_EXE=المسار\blender.exe
+
+ملاحظة: حزمة pip اسمها `bpy` لا تدعم معظم إصدارات Windows؛ استخدم البرنامج الرسمي.
+2026-05-15 03:13:46.976 | INFO     | __main__:main:225 - ╔══════════════════════════════════════════════════╗
+2026-05-15 03:13:46.976 | INFO     | __main__:main:226 - ║   PIFuHD → NVIDIA Audio2Face Pipeline            ║
+2026-05-15 03:13:46.976 | INFO     | __main__:main:227 - ╚══════════════════════════════════════════════════╝
+2026-05-15 03:13:46.976 | INFO     | __main__:main:228 -   Input OBJ : assets/123.obj
+2026-05-15 03:13:46.976 | INFO     | __main__:main:230 -   Texture   : assets/123.png
+2026-05-15 03:13:46.976 | INFO     | __main__:main:233 -   Output dir: C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\outputs
+2026-05-15 03:13:49.382 | INFO     | __main__:run_pipeline:113 - ━━━ Stage 1: Load OBJ ━━━
+2026-05-15 03:13:49.382 | INFO     | utils.mesh_io:load_obj:41 - Loading OBJ: assets\123.obj
+2026-05-15 03:13:49.807 | INFO     | utils.mesh_io:load_obj:59 - Loaded mesh: 46,109 vertices, 92,214 faces
+2026-05-15 03:13:49.873 | WARNING  | utils.mesh_io:_apply_texture:84 - Could not apply texture: 'ColorVisuals' object has no attribute 'uv'
+2026-05-15 03:13:49.980 | WARNING  | utils.mesh_io:_validate:109 -   ⚠ 183 duplicate vertices detected
+2026-05-15 03:13:49.980 | WARNING  | utils.mesh_io:_validate:109 -   ⚠ 366 degenerate (zero-area) faces
+2026-05-15 03:13:49.980 | INFO     | __main__:run_pipeline:125 - ━━━ Stage 2: Mesh Cleanup ━━━
+2026-05-15 03:13:52.751 | INFO     | cleanup:clean_mesh:45 - === Mesh Cleanup ===
+2026-05-15 03:13:52.751 | INFO     | cleanup:clean_mesh:51 -   Input : 46,109 verts, 92,214 faces
+2026-05-15 03:13:52.796 | DEBUG    | cleanup:_remove_duplicates:83 -   Duplicate removal: 46,109 → 45,926 vertices (removed 183)
+2026-05-15 03:13:52.862 | DEBUG    | cleanup:_fix_normals:91 -   Normals fixed
+2026-05-15 03:13:52.882 | DEBUG    | cleanup:_remove_degenerate:102 -   Removed 366 degenerate faces
+2026-05-15 03:13:52.913 | DEBUG    | cleanup:_fill_holes:127 -   Open3D hole fill unavailable (fill_holes not available), using trimesh fallback
+2026-05-15 03:13:52.983 | DEBUG    | cleanup:_fill_holes:129 -   Holes filled via trimesh
+2026-05-15 03:13:52.983 | DEBUG    | cleanup:_decimate:144 -   Decimating 91,848 → ~15,000 faces …
+2026-05-15 03:13:54.130 | DEBUG    | cleanup:_decimate:154 -   Decimation done → 15,000 faces
+2026-05-15 03:13:54.130 | INFO     | cleanup:clean_mesh:66 -   Output: 7,502 verts, 15,000 faces
+2026-05-15 03:13:54.134 | INFO     | cleanup:clean_mesh:67 - === Cleanup complete ===
+2026-05-15 03:13:54.180 | INFO     | utils.mesh_io:save_obj:119 - Saved OBJ → C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\outputs\01_cleaned.obj
+2026-05-15 03:13:54.180 | INFO     | __main__:run_pipeline:129 -   → C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\outputs\01_cleaned.obj
+2026-05-15 03:13:54.180 | INFO     | __main__:run_pipeline:139 - ━━━ Stage 3: Face Detection ━━━
+2026-05-15 03:13:54.180 | INFO     | retopo:detect_face_region:49 - === Face Detection ===
+2026-05-15 03:13:54.180 | DEBUG    | retopo:_head_mask:96 -   Y threshold for head: 0.403  (1,612 / 7,502 vertices)
+2026-05-15 03:13:54.219 | INFO     | retopo:detect_face_region:52 -   Face region: 1,610 vertices, 3,125 faces
+2026-05-15 03:13:54.225 | DEBUG    | retopo:_landmarks_mediapipe:177 -   mediapipe not installed
+2026-05-15 03:13:54.225 | WARNING  | retopo:_detect_landmarks:111 -   MediaPipe failed — falling back to heuristic
+2026-05-15 03:13:54.241 | INFO     | retopo:_landmarks_heuristic:267 -   Heuristic: 18 landmarks estimated
+2026-05-15 03:13:54.241 | INFO     | retopo:detect_face_region:55 -   Landmarks detected: 18
+2026-05-15 03:13:54.250 | INFO     | utils.mesh_io:save_obj:119 - Saved OBJ → C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\outputs\02_face.obj
+2026-05-15 03:13:54.250 | INFO     | __main__:run_pipeline:144 - ━━━ Stage 4: Retopology ━━━
+2026-05-15 03:13:54.250 | INFO     | retopo:retopologize:67 - === Retopology ===
+2026-05-15 03:13:56.015 | DEBUG    | retopo:_uniform_remesh:296 -   Remeshed → 4,138 verts
+2026-05-15 03:13:56.187 | INFO     | retopo:retopologize:75 -   Retopo result: 4,138 verts, 8,192 faces
+2026-05-15 03:13:56.216 | INFO     | utils.mesh_io:save_obj:119 - Saved OBJ → C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\outputs\03_face_retopo.obj
+2026-05-15 03:13:56.216 | INFO     | __main__:run_pipeline:147 -   → C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\outputs\03_face_retopo.obj
+2026-05-15 03:13:56.216 | INFO     | __main__:run_pipeline:155 - ━━━ Stage 5: Blendshape Generation ━━━
+2026-05-15 03:13:56.218 | INFO     | blendshapes:generate_blendshapes:53 - === Blendshape Generation ===
+2026-05-15 03:13:56.238 | DEBUG    | blendshapes:generate_blendshapes:62 -   JawOpen: max displacement = 0.0388
+2026-05-15 03:13:56.238 | DEBUG    | blendshapes:generate_blendshapes:62 -   MouthSmileLeft: max displacement = 0.0282
+2026-05-15 03:13:56.238 | DEBUG    | blendshapes:generate_blendshapes:62 -   MouthSmileRight: max displacement = 0.0282
+2026-05-15 03:13:56.238 | DEBUG    | blendshapes:generate_blendshapes:62 -   EyeBlinkLeft: max displacement = 0.0075
+2026-05-15 03:13:56.238 | DEBUG    | blendshapes:generate_blendshapes:62 -   EyeBlinkRight: max displacement = 0.0047
+2026-05-15 03:13:56.238 | DEBUG    | blendshapes:generate_blendshapes:62 -   MouthPucker: max displacement = 0.0141
+2026-05-15 03:13:56.247 | DEBUG    | blendshapes:generate_blendshapes:62 -   MouthFunnel: max displacement = 0.0074
+2026-05-15 03:13:56.248 | DEBUG    | blendshapes:generate_blendshapes:62 -   BrowInnerUp: max displacement = 0.0057
+2026-05-15 03:13:56.250 | DEBUG    | blendshapes:generate_blendshapes:62 -   BrowDown_L: max displacement = 0.0093
+2026-05-15 03:13:56.250 | DEBUG    | blendshapes:generate_blendshapes:62 -   BrowDown_R: max displacement = 0.0047
+2026-05-15 03:13:56.256 | DEBUG    | blendshapes:generate_blendshapes:62 -   CheekPuff: max displacement = 0.0167
+2026-05-15 03:13:56.258 | DEBUG    | blendshapes:generate_blendshapes:62 -   Viseme_AA: max displacement = 0.0226
+2026-05-15 03:13:56.263 | DEBUG    | blendshapes:generate_blendshapes:62 -   Viseme_OH: max displacement = 0.0138
+2026-05-15 03:13:56.263 | DEBUG    | blendshapes:generate_blendshapes:62 -   Viseme_EE: max displacement = 0.0213
+2026-05-15 03:13:56.263 | DEBUG    | blendshapes:generate_blendshapes:62 -   Viseme_FV: max displacement = 0.0046
+2026-05-15 03:13:56.263 | DEBUG    | blendshapes:generate_blendshapes:62 -   Viseme_MP: max displacement = 0.0006
+2026-05-15 03:13:56.263 | INFO     | blendshapes:generate_blendshapes:68 - === Generated 16 blendshapes ===
+2026-05-15 03:13:56.288 | INFO     | blendshapes:save_blendshapes:78 - Blendshapes saved to C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\outputs\blendshapes
+2026-05-15 03:13:56.288 | INFO     | __main__:run_pipeline:163 -   → C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\outputs\blendshapes
+2026-05-15 03:13:56.289 | INFO     | __main__:run_pipeline:171 - ━━━ Stage 6: Export (FBX / USD) ━━━
+2026-05-15 03:13:56.289 | INFO     | export:export_for_audio2face:173 - Blender export script written → C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\outputs\_blender_export_script.py
+2026-05-15 03:13:56.299 | INFO     | export:_run_blender:383 - استخدام Blender: C:\Program Files\Blender Foundation\Blender 5.1\blender.exe
+2026-05-15 03:13:56.299 | INFO     | export:_run_blender:390 - Running Blender: C:\Program Files\Blender Foundation\Blender 5.1\blender.exe --background --python C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\outputs\_blender_export_script.py
+2026-05-15 03:14:10.334 | INFO     | export:_run_blender:408 - Blender finished successfully
+2026-05-15 03:14:10.334 | DEBUG    | export:_run_blender:411 -   [blender] === Audio2Face Blender Export Script ===
+2026-05-15 03:14:10.334 | DEBUG    | export:_run_blender:411 -   [blender] Importing OBJ: C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\outputs\03_face_retopo.obj
+2026-05-15 03:14:10.334 | DEBUG    | export:_run_blender:411 -   [blender] Mesh: 4138 verts, 8192 faces
+2026-05-15 03:14:10.334 | DEBUG    | export:_run_blender:411 -   [blender] Injecting blendshapes as shape keys ...
+2026-05-15 03:14:10.334 | DEBUG    | export:_run_blender:411 -   [blender]   Shape key added: JawOpen
+2026-05-15 03:14:10.338 | DEBUG    | export:_run_blender:411 -   [blender]   Shape key added: MouthSmileLeft
+2026-05-15 03:14:10.338 | DEBUG    | export:_run_blender:411 -   [blender]   Shape key added: MouthSmileRight
+2026-05-15 03:14:10.338 | DEBUG    | export:_run_blender:411 -   [blender]   Shape key added: EyeBlinkLeft
+2026-05-15 03:14:10.338 | DEBUG    | export:_run_blender:411 -   [blender]   Shape key added: EyeBlinkRight
+2026-05-15 03:14:10.338 | DEBUG    | export:_run_blender:411 -   [blender]   Shape key added: MouthPucker
+2026-05-15 03:14:10.338 | DEBUG    | export:_run_blender:411 -   [blender]   Shape key added: MouthFunnel
+2026-05-15 03:14:10.338 | DEBUG    | export:_run_blender:411 -   [blender]   Shape key added: BrowInnerUp
+2026-05-15 03:14:10.338 | DEBUG    | export:_run_blender:411 -   [blender]   Shape key added: BrowDown_L
+2026-05-15 03:14:10.338 | DEBUG    | export:_run_blender:411 -   [blender]   Shape key added: BrowDown_R
+2026-05-15 03:14:10.338 | DEBUG    | export:_run_blender:411 -   [blender]   Shape key added: CheekPuff
+2026-05-15 03:14:10.338 | DEBUG    | export:_run_blender:411 -   [blender]   Shape key added: Viseme_AA
+2026-05-15 03:14:10.338 | DEBUG    | export:_run_blender:411 -   [blender]   Shape key added: Viseme_OH
+2026-05-15 03:14:10.338 | DEBUG    | export:_run_blender:411 -   [blender]   Shape key added: Viseme_EE
+2026-05-15 03:14:10.338 | DEBUG    | export:_run_blender:411 -   [blender]   Shape key added: Viseme_FV
+2026-05-15 03:14:10.338 | DEBUG    | export:_run_blender:411 -   [blender]   Shape key added: Viseme_MP
+2026-05-15 03:14:10.338 | DEBUG    | export:_run_blender:411 -   [blender] Total shape keys: 17
+2026-05-15 03:14:10.338 | DEBUG    | export:_run_blender:411 -   [blender] Creating head armature ...
+2026-05-15 03:14:10.338 | DEBUG    | export:_run_blender:411 -   [blender] Armature created and mesh parented.
+2026-05-15 03:14:10.338 | DEBUG    | export:_run_blender:411 -   [blender] Exporting FBX â†’ C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\outputs\head_audio2face.fbx
+2026-05-15 03:14:10.338 | DEBUG    | export:_run_blender:411 -   [blender] FBX export starting... 'C:\\Users\\MohamedSarhan\\Desktop\\Frontend\\obj-to-vedio\\pifuhd_audio2face_pipeline\\outputs\\head_audio2face.fbx'
+2026-05-15 03:14:10.338 | DEBUG    | export:_run_blender:411 -   [blender] (bpy.data.armatures['Head_Armature_Data'], 'POSE')
+2026-05-15 03:14:10.338 | DEBUG    | export:_run_blender:411 -   [blender] export finished in 0.1179 sec.
+2026-05-15 03:14:10.338 | DEBUG    | export:_run_blender:411 -   [blender] FBX export done.
+2026-05-15 03:14:10.338 | DEBUG    | export:_run_blender:411 -   [blender] Exporting USD â†’ C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\outputs\head_audio2face.usdc
+2026-05-15 03:14:10.338 | DEBUG    | export:_run_blender:411 -   [blender] USD export done.
+2026-05-15 03:14:10.338 | DEBUG    | export:_run_blender:411 -   [blender] === Blender export script complete ===
+2026-05-15 03:14:10.338 | DEBUG    | export:_run_blender:411 -   [blender] Blender 5.1.1 (hash b70da489d7f4 built 2026-04-14 01:37:22)
+2026-05-15 03:14:10.338 | DEBUG    | export:_run_blender:411 -   [blender] OBJ import of '03_face_retopo.obj' took 34.56 ms
+2026-05-15 03:14:10.340 | DEBUG    | export:_run_blender:411 -   [blender] USD export of 'C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\outputs\head_audio2face.usdc' took 245.03 ms
+2026-05-15 03:14:10.340 | DEBUG    | export:_run_blender:411 -   [blender] Blender quit
+2026-05-15 03:14:10.340 | INFO     | export:_run_blender:419 -   Output [FBX]: C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\outputs\head_audio2face.fbx
+2026-05-15 03:14:10.340 | INFO     | export:_run_blender:419 -   Output [USD]: C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\outputs\head_audio2face.usdc
+2026-05-15 03:14:10.340 | INFO     | __main__:run_pipeline:181 -   [FBX] → C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\outputs\head_audio2face.fbx
+2026-05-15 03:14:10.342 | INFO     | __main__:run_pipeline:181 -   [USD] → C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\outputs\head_audio2face.usdc
+2026-05-15 03:14:10.343 | INFO     | __main__:run_pipeline:208 - ━━━ Pipeline complete in 21.0s ━━━
+2026-05-15 03:14:10.343 | INFO     | __main__:run_pipeline:209 -     Outputs in: C:\Users\MohamedSarhan\Desktop\Frontend\obj-to-vedio\pifuhd_audio2face_pipeline\outputs

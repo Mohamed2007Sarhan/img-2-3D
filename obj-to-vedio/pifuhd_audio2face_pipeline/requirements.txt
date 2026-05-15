@@ -1,0 +1,46 @@
+# ============================================================
+# PIFuHD → Audio2Face Pipeline Requirements
+# Python 3.11+
+# ============================================================
+
+# Core mesh processing
+numpy>=1.24.0
+scipy>=1.11.0
+trimesh>=4.0.0
+open3d>=0.18.0
+pyvista>=0.43.0
+
+# Computer vision / face detection
+opencv-python>=4.9.0
+mediapipe>=0.10.0
+
+# Audio processing
+librosa>=0.10.0
+soundfile>=0.12.0
+pyaudio>=0.2.14
+
+# 3D rendering / preview
+pyrender>=0.1.45
+pyglet>=2.0.0
+Pillow>=10.0.0
+
+# Blender Python (bpy) — install separately via pip for standalone use
+# pip install bpy==4.1.0  (or run scripts via Blender's Python interpreter)
+bpy>=4.1.0
+
+# USD export support
+# usd-core>=23.11  # optional, heavy dependency
+# pip install usd-core  (uncomment if USD export needed)
+
+# Optional: insightface for better face landmarks
+# insightface>=0.7.3
+# onnxruntime>=1.16.0
+
+# Utilities
+tqdm>=4.66.0
+loguru>=0.7.0
+argparse  # stdlib
+
+# Optional GPU acceleration
+# torch>=2.0.0  # for CUDA-aware operations
+# torchvision>=0.15.0
